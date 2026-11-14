@@ -8,6 +8,7 @@ import lombok.Data;
 @Data
 @Entity
 public class Product extends BaseModel{
+     private String imageUrl;
      private String name;
      private float price;
      private String description;
