@@ -1,8 +1,6 @@
-package ProductCatalog.example.ProductCatalog.Controller;
+package ProductCatalog.example.ProductCatalog.Models;
 
 
-import ProductCatalog.example.ProductCatalog.Models.BaseModel;
-import ProductCatalog.example.ProductCatalog.Models.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
