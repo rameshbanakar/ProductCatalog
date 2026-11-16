@@ -41,4 +41,9 @@ jobs:
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/my-java-api:latest
             sudo docker stop my-api || true
             sudo docker rm my-api || true
-            sudo docker run -d -p 8080:8080 --name my-api ${{ secrets.DOCKER_USERNAME }}/my-java-api:latest
+            sudo docker run -d -p 8080:8080 --name my-api \
+              -e SPRING_DATASOURCE_URL=jdbc:mysql://database-1.cp0kgo20q5mn.ap-south-2.rds.amazonaws.com:3306/productcatalog \
+              -e SPRING_DATASOURCE_USERNAME=admin \
+              -e SPRING_DATASOURCE_PASSWORD=Ramesh9108911421 \
+              -e SPRING_JPA_HIBERNATE_DDL_AUTO=update \
+              ${{ secrets.DOCKER_USERNAME }}/my-java-api:latest
