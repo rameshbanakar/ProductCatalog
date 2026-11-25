@@ -1,9 +1,13 @@
 package ProductCatalog.example.ProductCatalog.DTO;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class CategoryResponseDto {
+    private long id;
     private String name;
     private String description;
 }

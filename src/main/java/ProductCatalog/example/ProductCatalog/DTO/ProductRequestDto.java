@@ -2,13 +2,15 @@ package ProductCatalog.example.ProductCatalog.DTO;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class ProductRequestDto {
     private String imageUrl;
     private String name;
     private String description;
-    private float price;
+    private BigDecimal price;
     private int stocks;
-    private String category;
+    private CategoryRequestDto category;
 
 }
